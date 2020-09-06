@@ -164,7 +164,6 @@ header .nav-links .nav-link:hover::after, header .nav-links .nav-link:focus::aft
     position: absolute;
     display: block !important;
     z-index: 9999;
-    margin-top: 3px;
   }
   .burger .line1,
   .burger .line2,

@@ -83,6 +83,13 @@ header {
     }
 }
 
+
+
+
+
+// //////////////////
+// header
+// /////////////////////
 @media screen and (max-width:768px) {
     .nav-links {
         pointer-events: none;
@@ -166,7 +173,6 @@ header {
         position: absolute;
         display: block !important;
         z-index: 9999;
-        margin-top: 3px;
 
         .line1,
         .line2,
@@ -212,3 +218,7 @@ header {
         position: relative;
     }
 }
+
+// /////////////////////////
+// responsive menu
+// /////////////////////////
