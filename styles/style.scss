@@ -161,15 +161,9 @@ header {
 
     .fade {
         opacity: 1 !important;
-        // animation: link-move .4s ease .4s forwards;
     }
 
-    @keyframes link-move {
 
-        to {
-            transform: translateX(0);
-        }
-    }
 
     .open {
         clip-path: circle(1000px at 90% -25%);
@@ -263,7 +257,9 @@ section {
 footer {
     background-color: $footer-blue;
     height: auto;
-    padding: 20px;
+    padding-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 15px;
 
     .social-icons {
         display: flex;
@@ -272,5 +268,22 @@ footer {
         .instagram {
             margin-right: 10px;
         }
+    }
+
+    .working-time {
+        margin-top: 10px;
+        color: $other-white;
+        font-family: $raleway;
+        font-weight: bolder;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .copyright {
+        color: $other-white;
+        margin-top: 10px;
+
+        font-family: $raleway;
+        font-size: 14px;
     }
 }

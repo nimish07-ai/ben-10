@@ -142,18 +142,6 @@ header .nav-links .nav-link:hover::after, header .nav-links .nav-link:focus::aft
   .fade {
     opacity: 1 !important;
   }
-  @-webkit-keyframes link-move {
-    to {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
-  @keyframes link-move {
-    to {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
   .open {
     -webkit-clip-path: circle(1000px at 90% -25%);
             clip-path: circle(1000px at 90% -25%);
@@ -222,7 +210,9 @@ section::after {
 footer {
   background-color: #033863;
   height: auto;
-  padding: 20px;
+  padding-left: 20px;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
 
 footer .social-icons {
@@ -236,5 +226,21 @@ footer .social-icons {
 
 footer .social-icons .instagram {
   margin-right: 10px;
+}
+
+footer .working-time {
+  margin-top: 10px;
+  color: #FAFAFA;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+footer .copyright {
+  color: #FAFAFA;
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */
