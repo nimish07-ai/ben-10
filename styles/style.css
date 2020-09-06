@@ -10,6 +10,7 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  overflow-x: hidden;
 }
 
 html {
@@ -188,7 +189,7 @@ header .nav-links .nav-link:hover::after, header .nav-links .nav-link:focus::aft
 section {
   width: 100%;
   height: 100vh;
-  background-color: #FAFAFA;
+  background-color: #FF9F1C;
   padding: 10vh;
   font-size: 2em;
   position: relative;
@@ -213,6 +214,7 @@ footer {
   padding-left: 20px;
   padding-top: 25px;
   padding-bottom: 15px;
+  position: relative;
 }
 
 footer .social-icons {
@@ -222,6 +224,7 @@ footer .social-icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 10;
 }
 
 footer .social-icons .instagram {
@@ -231,6 +234,7 @@ footer .social-icons .instagram {
 footer .working-time {
   margin-top: 10px;
   color: #FAFAFA;
+  z-index: 10;
   font-family: "Raleway", sans-serif;
   font-weight: bolder;
   font-size: 18px;
@@ -240,7 +244,28 @@ footer .working-time {
 footer .copyright {
   color: #FAFAFA;
   margin-top: 10px;
+  z-index: 10;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
+}
+
+footer .phone-call-svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+}
+
+footer .phone-call-svg svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .phone-call-svg svg {
+    opacity: .3;
+  }
 }
 /*# sourceMappingURL=style.css.map */
