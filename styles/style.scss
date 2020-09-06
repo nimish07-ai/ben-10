@@ -1,0 +1,213 @@
+$dark-blue:#011627;
+$light-blue:#273642;
+$yellow:#FF9F1C;
+$footer-blue:#033863;
+$other-white:#FAFAFA;
+$red:#E71D36;
+$sky-blue:#2EC4B6;
+
+$raleway:'Raleway',
+sans-serif;
+$dm-sans: 'DM Sans',
+sans-serif;
+// /////////////////////
+// variables
+// /////////////////////
+
+
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+// ////////////////////
+// global styles 
+// ///////////////////
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark-blue;
+    height: 10vh;
+    width: 100vw;
+
+
+
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        width: 50%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+
+        .nav-link a {
+            word-spacing: 3px;
+            color: $other-white;
+            text-decoration: none;
+            font-family: $dm-sans;
+        }
+
+        .nav-link {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 100%;
+                height: .5px;
+                background-color: $yellow;
+                transform: scaleX(0);
+                transition: transform .3s ease-in-out;
+            }
+
+            &:hover::after,
+            &:focus::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .nav-links {
+        pointer-events: none;
+        flex-direction: column;
+        position: fixed;
+        width: 100% !important;
+        top: 10vh;
+        right: 0;
+        background-color: $dark-blue;
+        height: 90vh;
+        display: flex !important;
+        z-index: 999;
+        padding-bottom: 80px;
+        clip-path: circle(100px at 90% -15%);
+        transition: all 1s ease-out;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 200px;
+            bottom: 12%;
+            right: -20%;
+            background-color: rgba($yellow, .2);
+            z-index: -1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 200px;
+            top: 12%;
+            left: -20%;
+            background-color: rgba($yellow, .2);
+            z-index: -1;
+        }
+
+        .nav-link {
+            opacity: 0;
+        }
+
+        .nav-link:nth-child(1) {
+            transition: all .5s ease .2s;
+        }
+
+        .nav-link:nth-child(2) {
+            transition: all .5s ease .6s;
+        }
+
+        .nav-link:nth-child(3) {
+            transition: all .5s ease 1s;
+        }
+
+        .nav-link:nth-child(4) {
+            transition: all .5s ease 1.2s;
+        }
+    }
+
+    .fade {
+        opacity: 1 !important;
+        animation: link-move .8s ease .4s;
+    }
+
+    @keyframes link-move {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    .open {
+        clip-path: circle(1000px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .burger {
+        position: absolute;
+        display: block !important;
+        z-index: 9999;
+
+        .line1,
+        .line2,
+        .line3 {
+            position: relative;
+            width: 30px;
+            height: 3px;
+            background: $other-white;
+            margin: 5px;
+
+            &::after {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                height: 100%;
+                background-color: $yellow;
+            }
+
+        }
+
+        .line1 {
+            &::after {
+                width: 90%;
+            }
+
+        }
+
+        .line2 {
+            &::after {
+                width: 60%;
+            }
+        }
+
+        .line3 {
+            &::after {
+                width: 30%;
+            }
+        }
+    }
+
+    header {
+        position: relative;
+    }
+}

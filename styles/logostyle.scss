@@ -1,0 +1,180 @@
+@import "style";
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+}
+
+#line {
+    stroke-dasharray: 9992.9072265625px;
+    stroke-dashoffset: 9992.9072265625px;
+    animation: anim 3s ease alternate infinite;
+}
+
+@keyframes anim {
+
+    from {
+        fill: transparent;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+        fill: $other-white;
+    }
+}
+
+#Vector_2 {
+    animation: fill1 1s alternate infinite;
+    animation-delay: .5s;
+}
+
+#Vector_3 {
+    animation: fill2 1s alternate infinite;
+    animation-delay: .7s;
+}
+
+#Vector_4 {
+    animation: fill3 1s alternate infinite;
+    animation-delay: .9s;
+}
+
+#Vector_5 {
+    animation: fill1 1s alternate infinite;
+    animation-delay: 1.2s;
+}
+
+#Vector_6 {
+    animation: fill2 1s alternate infinite;
+    animation-delay: 1.4s;
+}
+
+#Vector_7 {
+    animation: fill13 1s alternate infinite;
+    animation-delay: 1.5s;
+}
+
+#Vector_8 {
+    animation: fill1 1s alternate infinite;
+    animation-delay: 1.6s;
+}
+
+#Vector_9 {
+    animation: fill2 1s alternate infinite;
+    animation-delay: 1.7s;
+}
+
+#Vector_10 {
+    animation: fill3 1s alternate infinite;
+    animation-delay: 1.9s;
+}
+
+#Vector_11 {
+    animation: fill1 1s alternate infinite;
+    animation-delay: 2.1s;
+}
+
+#Vector_12 {
+    animation: fill2 1s alternate infinite;
+    animation-delay: 2.3s;
+}
+
+#Vector_13 {
+    animation: fill13 1s alternate infinite;
+    animation-delay: 2.5s;
+}
+
+#Vector_14 {
+    animation: fill1 1s alternate infinite;
+    animation-delay: 2.7s;
+}
+
+#Vector_15 {
+    animation: fill12 1s alternate infinite;
+    animation-delay: 2.9s;
+}
+
+#Vector_16 {
+    animation: fill13 1s alternate infinite;
+    animation-delay: 3.1s;
+}
+
+#Vector_17 {
+    animation: fill1 1s alternate infinite;
+    animation-delay: 3.3s;
+}
+
+@keyframes fill1 {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #00B2FF;
+    }
+}
+
+@keyframes fill2 {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #FEE9AB;
+    }
+}
+
+
+
+@keyframes fill3 {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #FF0000;
+    }
+}
+
+#text {
+    margin-left: 6px;
+}
+
+#textpath {
+    stroke-dasharray: 2406.29296875px;
+    stroke-dashoffset: 2406.29296875px;
+    transition: all ease;
+    animation: textanimm ease alternate infinite;
+    animation-duration: 2s;
+}
+
+@keyframes textanimm {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        fill: $other-white;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .logo {
+        margin-left: 6px;
+    }
+
+
+    .pcb {
+        width: 35px;
+        height: 35px;
+    }
+
+    .text {
+        width: 220px;
+        height: 30px;
+    }
+}
