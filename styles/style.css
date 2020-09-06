@@ -86,10 +86,10 @@ header .nav-links .nav-link:hover::after, header .nav-links .nav-link:focus::aft
     display: flex !important;
     z-index: 999;
     padding-bottom: 80px;
-    -webkit-clip-path: circle(100px at 90% -15%);
-            clip-path: circle(100px at 90% -15%);
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
+    -webkit-clip-path: circle(100px at 90% -25%);
+            clip-path: circle(100px at 90% -25%);
+    -webkit-transition: all .6s ease-out;
+    transition: all .6s ease-out;
   }
   .nav-links::after {
     content: '';
@@ -156,14 +156,15 @@ header .nav-links .nav-link:hover::after, header .nav-links .nav-link:focus::aft
     }
   }
   .open {
-    -webkit-clip-path: circle(1000px at 90% -15%);
-            clip-path: circle(1000px at 90% -15%);
+    -webkit-clip-path: circle(1000px at 90% -25%);
+            clip-path: circle(1000px at 90% -25%);
     pointer-events: all;
   }
   .burger {
     position: absolute;
     display: block !important;
     z-index: 9999;
+    margin-top: 3px;
   }
   .burger .line1,
   .burger .line2,

@@ -96,8 +96,8 @@ header {
         display: flex !important;
         z-index: 999;
         padding-bottom: 80px;
-        clip-path: circle(100px at 90% -15%);
-        transition: all 1s ease-out;
+        clip-path: circle(100px at 90% -25%);
+        transition: all .6s ease-out;
 
         &::after {
             content: '';
@@ -158,7 +158,7 @@ header {
     }
 
     .open {
-        clip-path: circle(1000px at 90% -15%);
+        clip-path: circle(1000px at 90% -25%);
         pointer-events: all;
     }
 
@@ -166,6 +166,7 @@ header {
         position: absolute;
         display: block !important;
         z-index: 9999;
+        margin-top: 3px;
 
         .line1,
         .line2,
