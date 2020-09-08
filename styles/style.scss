@@ -246,7 +246,7 @@ header {
     padding-left: 60px;
     padding-top: 60px;
     padding-right: 20px;
-
+    position: relative;
 
     .heading-slider-container {
         width: 100%;
@@ -291,6 +291,91 @@ header {
             }
         }
     }
+
+
+    .svg-container {
+        margin-left: auto;
+        width: 450px;
+        height: 450px;
+        padding: 20px;
+        overflow: hidden;
+
+        .top-carousel-svg {
+            width: 100%;
+            height: 100%;
+            // filter: drop-shadow(0px 0px 2px rgba($other-white, .3));
+        }
+    }
+
+    .prop1 {
+        position: absolute;
+        bottom: 30%;
+        background-color: $light-blue;
+        width: 120px;
+        height: 50px;
+        opacity: .4;
+        border-radius: 3px;
+        animation: prop1move 5s ease infinite alternate;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: -50%;
+            background-color: $other-white;
+            opacity: .6;
+            height: 2px;
+            width: 100%;
+        }
+    }
+
+    .prop2 {
+        position: absolute;
+        top: 7%;
+        right: 2%;
+        width: 200px;
+        height: 2px;
+        background-color: rgba($red, .2);
+        z-index: 7;
+
+        &::after {
+            position: absolute;
+            top: -500%;
+            left: 0;
+            content: '';
+            width: 10px;
+            opacity: .4;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $sky-blue;
+            animation: prop2move 4s ease infinite;
+        }
+    }
+
+}
+
+@keyframes prop1move {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 120px;
+    }
+}
+
+@keyframes prop2move {
+    0% {
+        left: 0%;
+    }
+
+    50% {
+        left: 90%;
+    }
+
+    100% {
+        left: 0;
+    }
 }
 
 @keyframes headingslider {
@@ -325,10 +410,41 @@ header {
         }
 
         100% {
-            top: -230px;
+            top: -300px;
         }
     }
 
+    .svg-container {
+
+        width: 200px !important;
+        height: 200px !important;
+        margin: 5px 5px 5px auto !important;
+
+        .top-carousel-svg {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .prop1 {
+        width: 80px;
+        animation: prop1move 3s ease infinite alternate !important;
+        height: 30px !important;
+    }
+
+    @keyframes prop1move {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 80px;
+        }
+    }
+
+    .prop2 {
+        width: 60px !important;
+    }
 }
 
 // ///////////////////
