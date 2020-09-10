@@ -442,6 +442,144 @@ header .nav-links .nav-link:hover::after, header .nav-links .nav-link:focus::aft
   }
 }
 
+.category-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.category-section .category-heading {
+  text-transform: capitalize;
+  color: #011627;
+  font-size: 60px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 7px;
+  text-align: center;
+  width: 100%;
+}
+
+.category-section .category-section-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  height: 350px;
+  margin: 100px auto;
+}
+
+.category-section .category-section-row .left {
+  width: 45%;
+  height: 90%;
+}
+
+.category-section .category-section-row .right {
+  height: 90%;
+  width: 45%;
+}
+
+.category-section img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.category-section .mobiles,
+.category-section .refrigerators,
+.category-section .airconditioners,
+.category-section .laptops,
+.category-section .tvs,
+.category-section .washingmachines,
+.category-section .security,
+.category-section .hometheaters {
+  position: relative;
+}
+
+.category-section .mobiles::after,
+.category-section .refrigerators::after,
+.category-section .airconditioners::after,
+.category-section .laptops::after,
+.category-section .tvs::after,
+.category-section .washingmachines::after,
+.category-section .security::after,
+.category-section .hometheaters::after {
+  content: 'MOBILES';
+  width: 100%;
+  bottom: -15%;
+  left: 0%;
+  position: absolute;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  color: #273642;
+  letter-spacing: 3px;
+  font-size: 22px;
+}
+
+.category-section .mobiles::after {
+  content: 'MOBILES';
+}
+
+.category-section .laptops::after {
+  content: 'LAPTOPS';
+}
+
+.category-section .tvs::after {
+  content: 'TELEVISIONS';
+}
+
+.category-section .hometheaters::after {
+  content: 'HOME THEATERS';
+}
+
+.category-section .refrigerators::after {
+  content: 'REFRIGERATORS';
+}
+
+.category-section .washingmachines::after {
+  content: 'WASHING MACHINES';
+}
+
+.category-section .airconditioners::after {
+  content: 'AIR CONDITIONERS ';
+}
+
+.category-section .security::after {
+  content: 'SECURITY';
+}
+
+@media screen and (max-width: 768px) {
+  .category-section .category-heading {
+    font-size: 30px;
+  }
+  .category-section .category-section-row {
+    height: 120px !important;
+    margin: 40px auto !important;
+  }
+  .category-section .category-section-row .category-heading {
+    font-size: 20px;
+  }
+  .category-section .category-section-row .mobiles::after,
+  .category-section .category-section-row .refrigerators::after,
+  .category-section .category-section-row .airconditioners::after,
+  .category-section .category-section-row .laptops::after,
+  .category-section .category-section-row .tvs::after,
+  .category-section .category-section-row .washingmachines::after,
+  .category-section .category-section-row .security::after,
+  .category-section .category-section-row .hometheaters::after {
+    font-size: 12px;
+    letter-spacing: 2px;
+    bottom: -20%;
+  }
+  .category-section .category-section-row .washingmachines::after,
+  .category-section .category-section-row .airconditioners::after {
+    bottom: -35%;
+  }
+}
+
 footer {
   background-color: #033863;
   height: auto;
