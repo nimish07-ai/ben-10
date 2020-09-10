@@ -48,3 +48,16 @@ burger.addEventListener('click', () => {
 //     }
 // }
 // headingslider();
+
+
+
+
+
+
+
+
+const categorycard = document.querySelector('.category-section-column');
+
+function alert() {
+    alert('mkbsda')
+}
