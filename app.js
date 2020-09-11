@@ -19,45 +19,75 @@ burger.addEventListener('click', () => {
 // script for carousel***************
 
 
-// function slidedown() {
-//     $('.heading-slider').animate({
-//         top: '-=150'
-//     }, 2000)
-// };
 
-// function slideup() {
-//     $('.heading-slider').animate({
-//         top: '+=150px'
-//     }, 2000)
-// };
+// *****************************modal script
 
-// function headingslider() {
-//     var m = 2;
-//     while (m > 0) {
-//         var i = 0,
-//             j = 0;
 
-//         for (i = 0; i < 3; i++) {
-//             setTimeout(slidedown(), 3000);
-//             console.log('on');
-//         };
-//         for (j = 0; j < 3; j++) {
-//             setTimeout(slidedown(), 3000);
-//             console.log('off');
-//         };
-//     }
-// }
-// headingslider();
+go_to = "contact-us"
+len = document.location.href.length
+con = document.location.href.substring(len - 5, len)
+if (con !== ".html") {
+    con = '';
+}
+
+modal_container = document.querySelector('.modal-container')
+
+function modal_magic(flag) //true appear false disappear
+{
+    if (flag) {
+        modal_container.style.display = "block";
+    } else {
+        // modal_container.style.visiblity = "hidden"
+        modal_container.style.display = 'none';
+
+    }
+}
+modal_magic(false)
 
 
 
 
 
+but = document.querySelector(".catogree-name-quire-to-contactus")
+// lin_length=but.href.last('/')
+lin = but.href.lastIndexOf('/')
+but.href = but.href.substring(0, lin) + `/contact-us${con} `
+// but.href=but.href.[lin_length-1]+`#${document.location.href.split('#')[1]}=`;
+
+cls_modal = document.querySelector(".close-modal")
+cls_modal.addEventListener('click', ev => {
+    modal_magic(false)
+})
+
+opt = ["checkout", "buying"]
+opt.forEach(ele => {
+    elem = document.querySelector(`#${ele}`)
+    elem.addEventListener('click', ev => {
+        // link=but.href.split('=')[0]
+        but.href = but.href.split('=')[0] + `=${ev.target.value}`;
+        // console.log(but.href.split('=')[0]+`${ev.target.value}`)
+
+
+    })
+})
 
 
 
-const categorycard = document.querySelector('.category-section-column');
+catogree_API = document.querySelectorAll("#catogree_API");
+catogree_API.forEach(ev => {
+    // console.log(ev,b[i]);
 
-function alert() {
-    alert('mkbsda')
+    ev.addEventListener('click', catogree)
+
+})
+
+async function catogree() {
+    setTimeout(() => {
+        console.log(document.location.href.split('#')[1]);
+        // catogree_name=document.location.href.split('#')[1];
+        // but.href=but.href.split('#')[0]+`#${catogree_name}`;
+        but.href = but.href.split('#')[0] + `#${document.location.href.split('#')[1]}=`;
+    }, 100)
+    modal_magic(true)
+
 }

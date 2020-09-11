@@ -95,7 +95,11 @@ header {
 
 
 
-
+#active-link {
+    &::after {
+        transform: scale(1) !important;
+    }
+}
 
 // //////////////////
 // header
@@ -589,6 +593,7 @@ header {
 // category section
 // //////////////////////
 .modal-container {
+    display: none;
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -714,6 +719,10 @@ header {
         margin: 40px auto;
     }
 
+}
+
+.catogree-name-quire-to-contactus {
+    text-decoration: none;
 }
 
 @media screen and (max-width:380px) {

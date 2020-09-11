@@ -84,8 +84,8 @@
                 </svg>
             </div>
             <ul class="nav-links">
-                <li class="nav-link"><a href="">HOME</a></li>
-                <li class="nav-link"><a href="">ABOUT US</a></li>
+                <li class="nav-link" id="active-link"><a href="index.html">HOME</a></li>
+                <li class="nav-link"><a href="aboutus.html">ABOUT US</a></li>
                 <li class="nav-link"><a href="">CONATACT US</a></li>
                 <li class="nav-link"><a href="">EMPLOYEE LOGIN</a></li>
             </ul>
@@ -962,45 +962,43 @@
             <div class="category-heading">Categories</div>
             <div class="category-section-row">
                 <div class="category-section-column left mobiles">
-                    <a href="#"><img src="images/mobiles.png" alt=""></a>
+                    <a href="#mobiles" id="catogree_API"><img src="images/mobiles.png" alt=""></a>
                 </div>
                 <div class="category-section-column right laptops">
-                    <a href="#"><img src="images/laptops.png" alt=""></a>
+                    <a href="#laptops" id="catogree_API"><img src="images/laptops.png" alt=""></a>
 
                 </div>
             </div>
             <div class="category-section-row">
                 <div class="category-section-column left tvs">
-                    <a href="#"><img src="images/tvs.png" alt=""></a>
+                    <a href="#tvs" id="catogree_API"><img src="images/tvs.png" alt=""></a>
 
                 </div>
                 <div class="category-section-column right hometheaters">
-                    <a href="#"><img src="images/hometheaters.png" alt=""></a>
+                    <a href="#hometheaters" id="catogree_API"><img src="images/hometheaters.png" alt=""></a>
 
                 </div>
             </div>
             <div class="category-section-row">
                 <div class="category-section-column left refrigerators">
-                    <a href="#"><img src="images/refrigerators.png" alt=""></a>
+                    <a href="#refrigerators" id="catogree_API"><img src="images/refrigerators.png" alt=""></a>
 
                 </div>
                 <div class="category-section-column right washingmachines">
-                    <a href="#"><img src="images/washingmachines.png" alt=""></a>
+                    <a href="#washingmachines" id="catogree_API"><img src="images/washingmachines.png" alt=""></a>
 
                 </div>
             </div>
             <div class="category-section-row">
                 <div class="category-section-column left airconditioners">
-                    <a href="#"><img src="images/airconditioners.png" alt=""></a>
+                    <a href="#airconditioners" id="catogree_API"><img src="images/airconditioners.png" alt=""></a>
 
                 </div>
                 <div class="category-section-column right security">
-                    <a href="#"><img src="images/security.png" alt=""></a>
+                    <a href="#security" id="catogree_API"><img src="images/security.png" alt=""></a>
                 </div>
             </div>
         </section>
-
-
 
 
 
@@ -1018,16 +1016,18 @@
                 <label for="checkout">
                     <div class="modal-input-container">
                         <label for="checkout" class="modal-input-label">Just checking out</label>
-                        <input type="radio" id="checkout" name="modal-input">
+                        <input type="radio" id="checkout" name="modal-input" value='Just_checking_out'>
                     </div>
                 </label>
                 <label for="buying">
                     <div class="modal-input-container">
                         <label for="buying" class="modal-input-label">Interested in buying</label>
-                        <input type="radio" id="buying" name='modal-input'>
+                        <input type="radio" id="buying" name='modal-input' value="Interested_inbuying">
                     </div>
                 </label>
-                <button class="modal-button">CONNECT</button>
+                <a href="" class="catogree-name-quire-to-contactus">
+                    <button class="modal-button" href="">CONNECT</button>
+                </a>
                 <a href="" class="modal-contact-link">CONTACT US</a>
             </div>
         </div>
@@ -1035,7 +1035,9 @@
         <!-- **********************************modal********************************************************** -->
 
         <!-- ************************************************footer ********************************* -->
-
+        <!-- <a href="" class="catogree-name-quire-to-contactus">
+            <button class="modal-button" href="">CONNECT</button>
+            </a> -->
         <footer>
             <div class="phone-call-svg">
                 <svg id="b976bd8f-b438-4ec7-9dbf-0fc03a613a4f" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"

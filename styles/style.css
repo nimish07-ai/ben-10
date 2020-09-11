@@ -78,6 +78,11 @@ header .nav-links .nav-link:hover::after, header .nav-links .nav-link:focus::aft
           transform: scaleX(1);
 }
 
+#active-link::after {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+}
+
 @media screen and (max-width: 768px) {
   .nav-links {
     pointer-events: none;
@@ -580,6 +585,7 @@ header .nav-links .nav-link:hover::after, header .nav-links .nav-link:focus::aft
 }
 
 .modal-container {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -710,6 +716,10 @@ header .nav-links .nav-link:hover::after, header .nav-links .nav-link:focus::aft
   .modal-button {
     margin: 40px auto;
   }
+}
+
+.catogree-name-quire-to-contactus {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 380px) {
